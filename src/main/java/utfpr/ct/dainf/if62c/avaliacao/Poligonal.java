@@ -19,11 +19,6 @@ public class Poligonal {
             throw new RuntimeException("Poligonal deve ter ao menos 2 vértices");
         else{
             vertices = new Ponto2D[nVertices];
-            for(int i=0; i<nVertices; i++)
-            {
-                vertices[i] = new PontoXZ(); 
-                
-            }
         }
     }
     public int getN(){
@@ -42,7 +37,7 @@ public class Poligonal {
             return;
         else for(int i=0; i<nVertices;i++)
         {
-            if(ponto.getClass() != vertices[i].getClass())
+            if(vertices[i]!= null && ponto.getClass() != vertices[i].getClass())
             {
                 throw new RuntimeException("Vértices devem estar no mesmo plano");
             }
